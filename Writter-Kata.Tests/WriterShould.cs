@@ -5,8 +5,20 @@ using Xunit;
 namespace Writter_Kata.Tests {
     public class WriterShould {
         [Fact]
-        public void Test1() {
-            WriteManager.Write("Prueba", FileType.txt);
+        public void TestTxtCreation() {
+            WriteManager.Write("FicheroTxt", FileType.txt);
+        }
+        [Fact]
+        public void TestXmlCreation() {
+            WriteManager.Write("FicheroXml", FileType.xml);
+        }
+        [Fact]
+        public void TestJsonCreation() {
+            WriteManager.Write("FicheroJson", FileType.json);
+        }
+        [Fact]
+        public void TestAymlCreation() {
+            WriteManager.Write("FicheroAyml", FileType.ayml);
         }
     }
 }
