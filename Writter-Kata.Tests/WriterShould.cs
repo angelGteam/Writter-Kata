@@ -20,6 +20,5 @@ namespace Writter_Kata.Tests {
         public void TestTxtCreation() {
             WriteManager.Write("FicheroTxt", FileType.txt);
         }
-
     }
 }
