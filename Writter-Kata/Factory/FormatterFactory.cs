@@ -5,12 +5,12 @@ using Writter_Kata.Interfaces;
 using Writter_Kata.Models;
 
 namespace Writter_Kata.Factory {
-    public static class WriterFactory {
+    public static class FormatterFactory {
         private static readonly Dictionary<FileType, IWriter> WriterCreators = new Dictionary<FileType, IWriter>{
-            { FileType.txt, new WriterTxt() },
-            { FileType.xml, new WriterXml() },
-            { FileType.ayml, new WriterAyml() },
-            { FileType.json, new WriterJson() }
+            { FileType.txt, new TxtFormatter() },
+            { FileType.xml, new XmlFormatter() },
+            { FileType.ayml, new AymlFormatter() },
+            { FileType.json, new JsonFormatter() }
         };
         public static IWriter CreateWriter(FileType type) {
             return WriterCreators[type];

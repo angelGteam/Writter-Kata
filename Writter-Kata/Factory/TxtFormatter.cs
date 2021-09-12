@@ -5,7 +5,7 @@ using System.Text;
 using Writter_Kata.Interfaces;
 
 namespace Writter_Kata.Factory {
-    class WriterTxt : IWriter {
+    class TxtFormatter : IWriter {
         public void WriteFile(string fileName) {
             using(StreamWriter streamWriter = new StreamWriter("C:\\" + fileName + ".txt")) {
             }

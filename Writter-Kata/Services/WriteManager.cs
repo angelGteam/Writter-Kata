@@ -8,7 +8,7 @@ using Writter_Kata.Models;
 namespace Writter_Kata.Services {
     public class WriteManager {
         public static void Write(string fileName, FileType extension) {
-            IWriter writer = WriterFactory.CreateWriter(extension);
+            IWriter writer = FormatterFactory.CreateWriter(extension);
             writer.WriteFile(fileName);
         }
     }

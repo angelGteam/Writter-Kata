@@ -5,9 +5,9 @@ using System.Text;
 using Writter_Kata.Interfaces;
 
 namespace Writter_Kata.Factory {
-    class WriterJson : IWriter {
+    class XmlFormatter : IWriter {
         public void WriteFile(string fileName) {
-            using(StreamWriter streamWriter = new StreamWriter("C:\\" + fileName + ".Json")) {
+            using(StreamWriter streamWriter = new StreamWriter("C:\\" + fileName + ".xml")) {
             }
         }
     }
