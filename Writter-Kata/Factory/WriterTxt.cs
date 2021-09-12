@@ -7,8 +7,7 @@ using Writter_Kata.Interfaces;
 namespace Writter_Kata.Factory {
     class WriterTxt : IWriter {
         public void WriteFile(string fileName) {
-            using(StreamWriter sw = new StreamWriter(fileName + ".txt")) {               
-                    sw.WriteLine("C:\\");
+            using(StreamWriter streamWriter = new StreamWriter("C:\\" + fileName + ".txt")) {
             }
         }
     }
