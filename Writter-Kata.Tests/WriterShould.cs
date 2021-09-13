@@ -6,19 +6,19 @@ namespace Writter_Kata.Tests {
     public class WriterShould {
         [Fact]
         public void TestJsonCreation() {
-            WriteManager.Write("FicheroJson", FileType.json);
+            WriteManager.StaticWrite("FicheroJson", FileType.json, 0);
         }
         [Fact]
         public void TestXmlCreation() {
-            WriteManager.Write("FicheroXml", FileType.xml);
+            WriteManager.StaticWrite("FicheroXml", FileType.xml, 0);
         }
         [Fact]
         public void TestAymlCreation() {
-            WriteManager.Write("FicheroAyml", FileType.ayml);
+            WriteManager.StaticWrite("FicheroAyml", FileType.yml, 0);
         }
         [Fact]
         public void TestTxtCreation() {
-            WriteManager.Write("FicheroTxt", FileType.txt);
+            WriteManager.StaticWrite("FicheroTxt", FileType.txt, 0);
         }
     }
 }

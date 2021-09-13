@@ -2,9 +2,9 @@
 using Writter_Kata.Interfaces;
 
 namespace Writter_Kata.Factory {
-    class XmlFormatter : IWriter {
+    class TxtFormatter : IFormatter {
         public void WriteFile(string fileName) {
-            StreamWriter streamWriter = new StreamWriter("C:\\" + fileName + ".xml");          
+            StreamWriter StreamWriter = new StreamWriter("C:\\" + fileName + ".txt");
         }
     }
 }

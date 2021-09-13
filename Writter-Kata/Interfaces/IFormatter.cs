@@ -4,7 +4,7 @@ using System.Text;
 using Writter_Kata.Models;
 
 namespace Writter_Kata.Interfaces {
-    public interface IWriter {
+    public interface IFormatter {
         void WriteFile(string fileName);
     }
 }

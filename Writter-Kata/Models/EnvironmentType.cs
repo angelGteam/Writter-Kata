@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Writter_Kata.Models {
-    public enum FileType {
-        json,
-        xml,
-        yml,
-        txt,
+    public enum EnvironmentType {
+        local = 0,
+        cloud = 1
     }
 }

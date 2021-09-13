@@ -6,10 +6,22 @@ using Writter_Kata.Interfaces;
 using Writter_Kata.Models;
 
 namespace Writter_Kata.Services {
-    public class WriteManager {
-        public static void Write(string fileName, FileType extension) {
-            IWriter writer = FormatterFactory.CreateWriter(extension);
-            writer.WriteFile(fileName);
+    public class WriteManager : IWritter {
+        public void Write(string fileName, FileType extension, EnvironmentType environment ) {
+            if(environment == 0) {
+                IFormatter LocalWriter = FormatterFactoryLocal.CreateWriter(extension);
+                LocalWriter.WriteFile(fileName);
+            }
+            IFormatter CloudWriter = FormatterFactoryCloud.CreateWriter(extension);
+            CloudWriter.WriteFile(fileName);
+        }
+        public static void StaticWrite(string fileName, FileType extension, EnvironmentType environment) {
+            if(environment == 0) {
+                IFormatter LocalWriter = FormatterFactoryLocal.CreateWriter(extension);
+                LocalWriter.WriteFile(fileName);
+            }
+            IFormatter CloudWriter = FormatterFactoryCloud.CreateWriter(extension);
+            CloudWriter.WriteFile(fileName);
         }
     }
 }
